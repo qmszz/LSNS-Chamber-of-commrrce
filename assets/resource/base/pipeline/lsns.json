@@ -1,0 +1,1520 @@
+{
+    "开始": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "next": [
+            "进入游戏"
+        ]
+    },
+    "进入游戏": {
+        "recognition": "OCR",
+        "expected": "8974",
+        "action": "Click",
+        "next": [
+            "成功进入"
+        ]
+    },
+    "成功进入": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "DoNothing",
+        "next": [
+            "进地图"
+        ]
+    },
+    "进地图": {
+        "action": "Click",
+        "target": [
+            150,
+            160,
+            0,
+            0
+        ],
+        "next": [
+            "校正位置"
+        ]
+    },
+    "校正位置": {
+        "action": "Swipe",
+        "begin": [
+            115,
+            300,
+            0,
+            0
+        ],
+        "end": [
+            1520,
+            234,
+            0,
+            0
+        ],
+        "next": [
+            "前往指定位置"
+        ]
+    },
+    "前往指定位置": {
+        "recognition": "OCR",
+        "expected": "阿妮塔发射中心",
+        "action": "Click",
+        "next": [
+            "确认"
+        ]
+    },
+    "确认": {
+        "timeout_next": [
+            "返回"
+        ],
+        "next": [
+            "判断"
+        ]
+    },
+    "判断": {
+        "next": [
+            "前往",
+            "返回"
+        ]
+    },
+    "前往": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 500000,
+        "next": [
+            "进入站点"
+        ],
+        "timeout_next": [
+            "进入站点"
+        ]
+    },
+    "返回": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入城市"
+        ]
+    },
+    "进入站点": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "next": [
+            "进入城市"
+        ]
+    },
+    "进入城市": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "next": [
+            "进入商会"
+        ]
+    },
+    "进入商会": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "阿妮塔发射中心商会.png"
+        ],
+        "threshold": 0.6,
+        "action": "Click",
+        "next": [
+            "接任务"
+        ]
+    },
+    "接任务": {
+        "recognition": "OCR",
+        "expected": "运输订单",
+        "action": "Click",
+        "next": [
+            "接取订单上"
+        ]
+    },
+    "接取订单上": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取上"
+        ]
+    },
+    "确认接取上": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单上"
+        ]
+    },
+    "是否还有订单上": {
+        "next": [
+            "接取订单上",
+            "上滑"
+        ]
+    },
+    "上滑": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Swipe",
+        "begin": [
+            1000,
+            600,
+            0,
+            0
+        ],
+        "end": [
+            1000,
+            200,
+            0,
+            0
+        ],
+        "next": [
+            "接取订单下"
+        ]
+    },
+    "接取订单下": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取下"
+        ]
+    },
+    "确认接取下": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单下"
+        ]
+    },
+    "是否还有订单下": {
+        "next": [
+            "接取订单下",
+            "返回站台"
+        ]
+    },
+    "返回站台": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "next": [
+            "确认返回"
+        ]
+    },
+    "确认返回": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程"
+        ]
+    },
+    "启程": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "去7号自由港"
+        ]
+    },
+    "去7号自由港": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            700,
+            200,
+            0,
+            0
+        ],
+        "end": [
+            700,
+            350,
+            0,
+            0
+        ],
+        "next": [
+            "前往7号自由港"
+        ]
+    },
+    "前往7号自由港": {
+        "recognition": "OCR",
+        "expected": "7号自由港",
+        "action": "Click",
+        "next": [
+            "前往目的地1"
+        ]
+    },
+    "前往目的地1": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 500000,
+        "next": [
+            "进入站点1"
+        ],
+        "timeout_next": [
+            "进入站点1"
+        ]
+    },
+    "进入站点1": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击1"
+        ]
+    },
+    "点击1": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击1"
+        ]
+    },
+    "再次点击1": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "进入城市1"
+        ]
+    },
+    "进入城市1": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入商会1"
+        ]
+    },
+    "进入商会1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "7号自由港商会.png"
+        ],
+        "threshold": 0.6,
+        "action": "Click",
+        "next": [
+            "接任务1"
+        ]
+    },
+    "接任务1": {
+        "recognition": "OCR",
+        "expected": "运输订单",
+        "action": "Click",
+        "next": [
+            "接取订单上1"
+        ]
+    },
+    "接取订单上1": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取上1"
+        ]
+    },
+    "确认接取上1": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单上1"
+        ]
+    },
+    "是否还有订单上1": {
+        "next": [
+            "接取订单上1",
+            "上滑1"
+        ]
+    },
+    "上滑1": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Swipe",
+        "begin": [
+            1000,
+            600,
+            0,
+            0
+        ],
+        "end": [
+            1000,
+            200,
+            0,
+            0
+        ],
+        "next": [
+            "接取订单下1"
+        ]
+    },
+    "接取订单下1": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取下1"
+        ]
+    },
+    "确认接取下1": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单下1"
+        ]
+    },
+    "是否还有订单下1": {
+        "next": [
+            "接取订单下1",
+            "返回站台1"
+        ]
+    },
+    "返回站台1": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "next": [
+            "确认返回1"
+        ]
+    },
+    "确认返回1": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程1"
+        ]
+    },
+    "启程1": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "去澄明数据中心"
+        ]
+    },
+    "去澄明数据中心": {
+        "recognition": "OCR",
+        "expected": "澄明数据中心",
+        "action": "Click",
+        "next": [
+            "前往目的地2"
+        ]
+    },
+    "前往目的地2": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 180000,
+        "next": [
+            "进入站点2"
+        ],
+        "timeout_next": [
+            "进入站点2"
+        ]
+    },
+    "进入站点2": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击2"
+        ]
+    },
+    "点击2": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击2"
+        ]
+    },
+    "再次点击2": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "进入城市2"
+        ]
+    },
+    "进入城市2": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入商会2"
+        ]
+    },
+    "进入商会2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "曼德矿场商会.png"
+        ],
+        "threshold": 0.6,
+        "action": "Click",
+        "target": [
+            990,
+            261,
+            100,
+            100
+        ],
+        "next": [
+            "接任务2"
+        ]
+    },
+    "接任务2": {
+        "recognition": "OCR",
+        "expected": "运输订单",
+        "action": "Click",
+        "next": [
+            "接取订单上2"
+        ]
+    },
+    "接取订单上2": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取上2"
+        ]
+    },
+    "确认接取上2": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单上2"
+        ]
+    },
+    "是否还有订单上2": {
+        "next": [
+            "接取订单上2",
+            "上滑2"
+        ]
+    },
+    "上滑2": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Swipe",
+        "begin": [
+            1000,
+            600,
+            0,
+            0
+        ],
+        "end": [
+            1000,
+            200,
+            0,
+            0
+        ],
+        "next": [
+            "接取订单下2"
+        ]
+    },
+    "接取订单下2": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取下2"
+        ]
+    },
+    "确认接取下2": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单下2"
+        ]
+    },
+    "是否还有订单下2": {
+        "next": [
+            "接取订单下2",
+            "返回站台2"
+        ]
+    },
+    "返回站台2": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "next": [
+            "确认返回2"
+        ]
+    },
+    "确认返回2": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程2"
+        ]
+    },
+    "启程2": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "去修格里城"
+        ]
+    },
+    "去修格里城": {
+        "recognition": "OCR",
+        "expected": "修格里城",
+        "action": "Click",
+        "next": [
+            "前往目的地3"
+        ]
+    },
+    "前往目的地3": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 100000,
+        "next": [
+            "进入站点3"
+        ],
+        "timeout_next": [
+            "进入站点3"
+        ]
+    },
+    "进入站点3": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击3"
+        ]
+    },
+    "点击3": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击3"
+        ]
+    },
+    "再次点击3": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "进入城市3"
+        ]
+    },
+    "进入城市3": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入商会3"
+        ]
+    },
+    "进入商会3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "澄明数据中心商会.png"
+        ],
+        "threshold": 0.6,
+        "action": "Click",
+        "next": [
+            "接任务3"
+        ]
+    },
+    "接任务3": {
+        "recognition": "OCR",
+        "expected": "运输订单",
+        "action": "Click",
+        "next": [
+            "接取订单上3"
+        ]
+    },
+    "接取订单上3": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取上3"
+        ]
+    },
+    "确认接取上3": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单上3"
+        ]
+    },
+    "是否还有订单上3": {
+        "next": [
+            "接取订单上3",
+            "上滑3"
+        ]
+    },
+    "上滑3": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Swipe",
+        "begin": [
+            1000,
+            600,
+            0,
+            0
+        ],
+        "end": [
+            1000,
+            200,
+            0,
+            0
+        ],
+        "next": [
+            "接取订单下3"
+        ]
+    },
+    "接取订单下3": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取下3"
+        ]
+    },
+    "确认接取下3": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单下3"
+        ]
+    },
+    "是否还有订单下3": {
+        "next": [
+            "接取订单下3",
+            "返回站台3"
+        ]
+    },
+    "返回站台3": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "next": [
+            "确认返回3"
+        ]
+    },
+    "确认返回3": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程3"
+        ]
+    },
+    "启程3": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "去曼德矿场"
+        ]
+    },
+    "去曼德矿场": {
+        "recognition": "OCR",
+        "expected": "曼德矿场",
+        "action": "Click",
+        "next": [
+            "前往目的地4"
+        ]
+    },
+    "前往目的地4": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 150000,
+        "next": [
+            "进入站点4"
+        ],
+        "timeout_next": [
+            "进入站点4"
+        ]
+    },
+    "进入站点4": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击4"
+        ]
+    },
+    "点击4": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "再次点击4"
+        ]
+    },
+    "再次点击4": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "进入城市4"
+        ]
+    },
+    "进入城市4": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入商会4"
+        ]
+    },
+    "进入商会4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "修格里成商会.png"
+        ],
+        "threshold": 0.6,
+        "action": "Click",
+        "next": [
+            "接任务4"
+        ]
+    },
+    "接任务4": {
+        "recognition": "OCR",
+        "expected": "运输订单",
+        "action": "Click",
+        "next": [
+            "接取订单上4"
+        ]
+    },
+    "接取订单上4": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取上4"
+        ]
+    },
+    "确认接取上4": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单上4"
+        ]
+    },
+    "是否还有订单上4": {
+        "next": [
+            "接取订单上4",
+            "上滑4"
+        ]
+    },
+    "上滑4": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Swipe",
+        "begin": [
+            1000,
+            600,
+            0,
+            0
+        ],
+        "end": [
+            1000,
+            200,
+            0,
+            0
+        ],
+        "next": [
+            "接取订单下4"
+        ]
+    },
+    "接取订单下4": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "确认接取下4"
+        ]
+    },
+    "确认接取下4": {
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "action": "Click",
+        "next": [
+            "是否还有订单下4"
+        ]
+    },
+    "是否还有订单下4": {
+        "next": [
+            "接取订单下4",
+            "返回站台4"
+        ]
+    },
+    "返回站台4": {
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "接取订单",
+        "next": [
+            "确认返回4"
+        ]
+    },
+    "确认返回4": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程4"
+        ]
+    },
+    "启程4": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "去淘金乐园"
+        ]
+    },
+    "去淘金乐园": {
+        "recognition": "OCR",
+        "expected": "淘金乐园",
+        "action": "Click",
+        "next": [
+            "前往目的地5"
+        ]
+    },
+    "前往目的地5": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 150000,
+        "next": [
+            "进入站点5"
+        ],
+        "timeout_next": [
+            "进入站点5"
+        ]
+    },
+    "进入站点5": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击5"
+        ]
+    },
+    "点击5": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击5"
+        ]
+    },
+    "再次点击5": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "启程5"
+        ]
+    },
+    "启程5": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "去荒原站"
+        ]
+    },
+    "去荒原站": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            700,
+            200,
+            0,
+            0
+        ],
+        "end": [
+            700,
+            650,
+            0,
+            0
+        ],
+        "next": [
+            "前往荒原站"
+        ]
+    },
+    "前往荒原站": {
+        "recognition": "OCR",
+        "expected": "荒原站",
+        "action": "Click",
+        "next": [
+            "前往目的地6"
+        ]
+    },
+    "前往目的地6": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 200000,
+        "next": [
+            "进入站点6"
+        ]
+    },
+    "进入站点6": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击6"
+        ]
+    },
+    "点击6": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击6"
+        ]
+    },
+    "再次点击6": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "启程6"
+        ]
+    },
+    "启程6": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "再去修格里城"
+        ]
+    },
+    "再去修格里城": {
+        "recognition": "OCR",
+        "expected": "修格里城",
+        "action": "Click",
+        "next": [
+            "前往目的地7"
+        ]
+    },
+    "前往目的地7": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 150000,
+        "next": [
+            "进入站点7"
+        ],
+        "timeout_next": [
+            "进入站点7"
+        ]
+    },
+    "进入站点7": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击7"
+        ]
+    },
+    "点击7": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击7"
+        ]
+    },
+    "再次点击7": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "进入城市5"
+        ]
+    },
+    "进入城市5": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入酒吧"
+        ]
+    },
+    "进入酒吧": {
+        "recognition": "TemplateMatch",
+        "template": "酒吧.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "喝一杯"
+        ]
+    },
+    "喝一杯": {
+        "recognition": "OCR",
+        "expected": "喝一杯",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "喝啊"
+        ]
+    },
+    "喝啊": {
+        "recognition": "OCR",
+        "expected": "银枝气泡水",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "再喝"
+        ]
+    },
+    "再喝": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            800,
+            500,
+            100,
+            30
+        ],
+        "post_delay": 30000,
+        "next": [
+            "返回站台5"
+        ]
+    },
+    "返回站台5": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程7"
+        ]
+    },
+    "启程7": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "再去澄明数据中心"
+        ]
+    },
+    "再去澄明数据中心": {
+        "recognition": "OCR",
+        "expected": "澄明数据中心",
+        "action": "Click",
+        "next": [
+            "前往目的地8"
+        ]
+    },
+    "前往目的地8": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 200000,
+        "next": [
+            "进入站点8"
+        ],
+        "timeout_next": [
+            "进入站点8"
+        ]
+    },
+    "进入站点8": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击8"
+        ]
+    },
+    "点击8": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击8"
+        ]
+    },
+    "再次点击8": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "进入城市6"
+        ]
+    },
+    "进入城市6": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入酒吧1"
+        ]
+    },
+    "进入酒吧1": {
+        "recognition": "TemplateMatch",
+        "template": "酒吧.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "喝一杯1"
+        ]
+    },
+    "喝一杯1": {
+        "recognition": "OCR",
+        "expected": "喝一杯",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "喝啊1"
+        ]
+    },
+    "喝啊1": {
+        "recognition": "OCR",
+        "expected": "银枝气泡水",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "再喝1"
+        ]
+    },
+    "再喝1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            800,
+            500,
+            100,
+            30
+        ],
+        "post_delay": 30000,
+        "next": [
+            "返回站台6"
+        ]
+    },
+    "返回站台6": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程8"
+        ]
+    },
+    "启程8": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "再去7号自由港"
+        ]
+    },
+    "再去7号自由港": {
+        "recognition": "OCR",
+        "expected": "7号自由港",
+        "action": "Click",
+        "next": [
+            "前往目的地9"
+        ]
+    },
+    "前往目的地9": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 200000,
+        "next": [
+            "进入站点9"
+        ],
+        "timeout_next": [
+            "进入站点9"
+        ]
+    },
+    "进入站点9": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击9"
+        ]
+    },
+    "点击9": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击9"
+        ]
+    },
+    "再次点击9": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ],
+        "post_delay": 3000,
+        "next": [
+            "进入城市7"
+        ]
+    },
+    "进入城市7": {
+        "recognition": "TemplateMatch",
+        "template": "访问城市.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "进入酒吧2"
+        ]
+    },
+    "进入酒吧2": {
+        "recognition": "TemplateMatch",
+        "template": "酒吧.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "喝一杯2"
+        ]
+    },
+    "喝一杯2": {
+        "recognition": "OCR",
+        "expected": "喝一杯",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "喝啊2"
+        ]
+    },
+    "喝啊2": {
+        "recognition": "OCR",
+        "expected": "银枝气泡水",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "再喝2"
+        ]
+    },
+    "再喝2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            800,
+            500,
+            100,
+            30
+        ],
+        "post_delay": 30000,
+        "next": [
+            "返回站台7"
+        ]
+    },
+    "返回站台7": {
+        "recognition": "TemplateMatch",
+        "template": "返回站台.png",
+        "action": "Click",
+        "next": [
+            "启程9"
+        ]
+    },
+    "启程9": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "action": "Click",
+        "next": [
+            "前往阿尼能源研究所"
+        ]
+    },
+    "前往阿尼能源研究所": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            700,
+            350,
+            0,
+            0
+        ],
+        "end": [
+            700,
+            150,
+            0,
+            0
+        ],
+        "next": [
+            "去阿妮塔能源研究所"
+        ]
+    },
+    "去阿妮塔能源研究所": {
+        "recognition": "OCR",
+        "expected": "阿妮塔能源研究所",
+        "action": "Click",
+        "next": [
+            "前往目的地10"
+        ]
+    },
+    "前往目的地10": {
+        "recognition": "OCR",
+        "expected": "前往目的地",
+        "action": "Click",
+        "post_delay": 400000,
+        "next": [
+            "进入站点10"
+        ],
+        "timeout_next": [
+            "进入站点10"
+        ]
+    },
+    "进入站点10": {
+        "recognition": "TemplateMatch",
+        "template": "进入站点.png",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "点击10"
+        ]
+    },
+    "点击10": {
+        "action": "Click",
+        "target": [
+            100,
+            200,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "再次点击10"
+        ]
+    },
+    "再次点击10": {
+        "action": "Click",
+        "target": [
+            80,
+            500,
+            0,
+            0
+        ]
+    },
+    "测试": {
+        "recognition": "DirectHit",
+        "action": "StartApp",
+        "package": ""
+    }
+}
